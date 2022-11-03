@@ -7,6 +7,9 @@ class Covered {
         this.titleNode =(document.createElement('p'));
         this.titleNode.innerText = text;
         this.titleNode.classList.add('term-text');
+        // this.titleNode.addEventListener('mouseover', (event) => {
+        //     this.tooltip.display = 'inline';
+        // });
         this.removeButton = document.createElement('button');
         this.removeButton.id = `remove-${index}`;
         this.removeButton.classList.add('remove')
@@ -20,6 +23,16 @@ class Covered {
         });
         this.node.appendChild(this.removeButton);
         this.node.appendChild(this.titleNode);
+        // this.tooltip = document.createElement('div');
+        // this.tooltip.id = `tooltip-${index}`;
+        // this.tooltip.classList.add(tooltip);
+        // this.tooltip.style.display = 'none';
+        this.counter = document.createElement('p');
+        this.counter.id = `counter-${index}`;
+        this.counter.className = 'counter';
+        this.counter.innerText = '0';
+        this.node.appendChild(this.counter);
+
         this.text = text;
         document.getElementById('blocked-domains-list').appendChild(this.node);
     }

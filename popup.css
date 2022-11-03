@@ -92,3 +92,15 @@ button.remove {
     color: green;
     font-weight: 800;
 }
+
+.counter {
+    border-radius: 200px;
+    margin-left: 10px;
+    padding: 2px;
+    background: lightgray;
+    color: white;
+}
+
+.counter p {
+    font-size: 6px;
+}
